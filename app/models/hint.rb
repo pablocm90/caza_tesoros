@@ -9,5 +9,4 @@ class Hint < ApplicationRecord
   def check_correctness(attempt)
     attempt == answer.correct
   end
-
 end

@@ -7,21 +7,25 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
+                label: 'tu mail, no creo que on envie nada, pero identificaros !',
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
+                label: 'tu contrasena',
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: true,
+                label: 'tu contrasena otra vez, que no te hayas equivocado',
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :username,
-                required: true
+                required: true,
+                label: 'Nombre de usuario, asi te veran el resto! :D'
                 %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Inscribirme" %>
   </div>
 <% end %>
 

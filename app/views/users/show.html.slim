@@ -2,4 +2,4 @@ h1 HOLA!! #{@user.username}, bienvenido a cazatesoros fuente 2020!
 
 
 = render partial: "hint", collection: @hints
-= render partial: 'next_hint', object: @next_hint
+= render partial: 'next_hint', object: @next_hint if @next_hint
