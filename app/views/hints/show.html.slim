@@ -1,2 +1,6 @@
-h1 Hints#show
-p Find me in app/views/hints/show.html.slim
+h1 #{@hint.title}
+p #{@hint.description}
+
+= simple_form_for @hint, url: answer_hint_path(@hint), method: :post do |f|
+  = f.input :attempt
+  = f.submit
