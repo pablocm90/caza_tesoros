@@ -1,5 +1,23 @@
-h1 HOLA!! #{@user.username}, bienvenido a cazatesoros fuente 2020! 
+br
+h1 HOLA!! #{@user.username}, bienvenido a cazatesoros fuente 2020! 😁
 
 
-= render partial: "hint", collection: @hints
-= render partial: 'next_hint', object: @next_hint if @next_hint
+br
+
+h2 Siguente Pista
+.d-flex.justify-content-around.flex-wrap
+  = render partial: 'next_hint', object: @next_hint if @next_hint
+
+br
+h2 Pistas contestadas
+
+.d-flex.justify-content-around.flex-wrap
+  = render partial: "hint", collection: @hints
+
+br
+
+h3 Lideres
+
+.d-flex.justify-content-around.flex-wrap
+  = render partial: "user_card", collection: @leaders
+

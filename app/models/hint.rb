@@ -7,6 +7,12 @@ class Hint < ApplicationRecord
   attr_accessor :attempt
 
   def check_correctness(attempt)
+    return check_with_range(attempt.to_i) if answer.range
+
     attempt == answer.correct
+  end
+
+  def check_with_range(attempt)
+    attempt > answer.correct.to_i - answer.range / 2 && attempt < answer.correct.to_i + answer.range / 2
   end
 end

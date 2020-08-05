@@ -31,3 +31,44 @@
 
 en:
   hello: "Hello world"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: Aprox. una hora
+        other: Aprox. %{count} horas
+      about_x_months:
+        one: Aprox 1 mes
+        other: Aprox %{count} meses
+      about_x_years:
+        one: Aprox 1 año
+        other: Aprox %{count} años
+      almost_x_years:
+        one: Casi 1 año
+        other: Casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        zero: menos de un minuto
+        one: menos de un minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        zero: menos de un segundo
+        one: menos de un segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mas de un año
+        other: mas de %{count} años
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: un año
+        other: "%{count} años"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"

@@ -15,6 +15,7 @@ class HintsController < ApplicationController
       UserHint.create(user: current_user, hint: @hint)
       redirect_to root_path
     else
+      flash[:notice] = "Pues parece que no ! 😜"
       render :show
     end
   end

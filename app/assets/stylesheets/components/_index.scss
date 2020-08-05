@@ -2,3 +2,67 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+h1 {
+  font-size: 36;
+  color: #20A39E;
+  font-weight: bold
+}
+
+h2 {
+  font-size: 24;
+  color: #23001E;
+  font-weight: bold
+}
+h3 {
+  font-size: 20;
+  color: #FFBA49;
+  font-weight: bold
+}
+
+.hint_card {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.round-leader {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 3px 4px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 1px 3px 4px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 3px 4px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  margin: 10px;
+  background-color: #EF5B5B;
+  color: #FFF;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 46px;
+    margin: 0px
+  }
+}
+
+.user_leader {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  margin: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
