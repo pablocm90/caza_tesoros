@@ -2,3 +2,4 @@
   h2 = next_hint.title
   p = next_hint.description
   = link_to 'alla vamos!', hint_path(next_hint)
+  p.small = next_hint.user_hints.size.to_s + " han contestado"

@@ -5,10 +5,8 @@ class HintsController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @hint = Hint.find(params[:id])
   end
-
+  
   def answer
     @hint = Hint.find(params[:id])
     if @hint.check_correctness(hint_params[:attempt])
@@ -18,6 +16,12 @@ class HintsController < ApplicationController
       flash[:notice] = "Pues parece que no ! 😜"
       render :show
     end
+  end
+  
+  def display
+    @user = current_user
+    @hint = Hint.find(params[:id])
+    @answer = @hint.answer.correct
   end
 
   def hint_params

@@ -66,3 +66,19 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+
+.small {
+  color: grey;
+  font-size: 12;
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+}
+
+.full {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}

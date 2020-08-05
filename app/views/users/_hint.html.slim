@@ -1,3 +1,5 @@
-.card.col-md-3.hint_card
-  h2 = hint.title
-  p = hint.description
+  .card.col-md-3.hint_card
+    = link_to '', display_hint_path(hint), class: "full" 
+    h2 = hint.title
+    p = hint.description
+    p.small = hint.user_hints.size.to_s + " han contestado"

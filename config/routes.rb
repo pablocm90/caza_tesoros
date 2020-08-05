@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :hints, only: [:index, :show] do
       member do 
         post :answer
+        get :display
       end
     end
   end
