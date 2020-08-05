@@ -1,5 +1,6 @@
-.card.user_leader
-  .round-leader
-    p = User.find(user_card[0]).username[0].capitalize
-  
-  h4 = User.find(user_card[0]).username + " - " + user_card[1].to_s
+- if user_cart
+  .card.user_leader
+    .round-leader
+      p = User.find(user_card[0]).username[0].capitalize
+    
+    h4 = User.find(user_card[0]).username + " - " + user_card[1].to_s
