@@ -11,7 +11,7 @@ br
 h2 Quien a contestado ya:
 
 - @hint.users.each do |user|
- .card.user_leader
+  .card.user_leader
     .round-leader
       p = user.username[0].capitalize
     p = user.username + " - hace " + time_ago_in_words(user.user_hints.find_by(hint_id: @hint.id).updated_at)
