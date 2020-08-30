@@ -9,7 +9,7 @@ ActiveAdmin.register User do
 
   form do |f|
     f.inputs "User" do
-      f.input :group_id, collection: Group.all
+      f.input :group_id, as: :select, collection: Group.all
       f.input :email
       f.input :username
     end
