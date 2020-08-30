@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_18_154715) do
+ActiveRecord::Schema.define(version: 2020_08_30_085027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,14 @@ ActiveRecord::Schema.define(version: 2020_07_18_154715) do
     t.string "title"
   end
 
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "hint_instructions"
+    t.string "welcome_message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "hints", force: :cascade do |t|
     t.bigint "answer_id", null: false
     t.text "description"
@@ -78,7 +86,9 @@ ActiveRecord::Schema.define(version: 2020_07_18_154715) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
     t.integer "order"
+    t.bigint "group_id"
     t.index ["answer_id"], name: "index_hints_on_answer_id"
+    t.index ["group_id"], name: "index_hints_on_group_id"
   end
 
   create_table "user_hints", force: :cascade do |t|
@@ -99,12 +109,16 @@ ActiveRecord::Schema.define(version: 2020_07_18_154715) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
+    t.bigint "group_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["group_id"], name: "index_users_on_group_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "hints", "answers"
+  add_foreign_key "hints", "groups"
   add_foreign_key "user_hints", "hints"
   add_foreign_key "user_hints", "users"
+  add_foreign_key "users", "groups"
 end

@@ -7,7 +7,7 @@ p #{@hint.description}
       = f.input :attempt, label: 'respuesta'
       = f.submit 'responder'
 
-h3 Ve a buscar la respuesta donde te indica esta pista, una vez la tengas podras contestar aqui
+h3 = @group.hint_instructions
 
 br
 

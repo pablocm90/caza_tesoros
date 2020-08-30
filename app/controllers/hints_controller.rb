@@ -7,6 +7,7 @@ class HintsController < ApplicationController
   def show
     @user = current_user
     @hint = Hint.find(params[:id])
+    @group = @hint.group
   end
   
   def answer
