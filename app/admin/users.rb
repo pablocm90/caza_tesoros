@@ -8,9 +8,11 @@ ActiveAdmin.register User do
   permit_params :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :username, :group_id
 
   form do |f|
-    f.input :group_id
-    f.input :email
-    f.input :username
+    f.inputs "User" do
+      f.input :group_id, collection: Group.all
+      f.input :email
+      f.input :username
+    end
   end
 
   
