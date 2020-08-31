@@ -11,7 +11,9 @@ class HintsController < ApplicationController
   end
   
   def answer
+    @user = current_user
     @hint = Hint.find(params[:id])
+    @group = @hint.group
     if @hint.check_correctness(hint_params[:attempt])
       UserHint.create(user: current_user, hint: @hint)
       redirect_to root_path
